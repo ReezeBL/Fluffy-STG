@@ -27,6 +27,10 @@
 	var/advanced = FALSE
 	custom_price = PAYCHECK_COMMAND
 
+	//FF ADD
+	//mob, that is being analyzed
+	var/mob/living/patient = null
+
 /obj/item/healthanalyzer/Initialize(mapload)
 	. = ..()
 	register_item_context()
@@ -72,6 +76,10 @@
 
 	user.visible_message(span_notice("[user] analyzes [M]'s vitals."))
 	balloon_alert(user, "analyzing vitals")
+
+	// FF EDIT: sends scan results to TGUI window.
+	patient = M
+	ui_interact(user)
 
 	switch (scanmode)
 		if (SCANMODE_HEALTH)
