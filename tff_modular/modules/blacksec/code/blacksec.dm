@@ -9,6 +9,11 @@
 		),
 	)
 
+/obj/item/clothing/under/rank/security/officer/post_reskin(mob/our_mob)
+	. = ..()
+	if (current_skin == "Black-Sec")
+		worn_icon_digi = 'tff_modular/modules/blacksec/icons/blacksec_worn_anthro.dmi'
+
 /obj/item/clothing/head/helmet/sec/Initialize(mapload)
 	. = ..()
 	unique_reskin += list(
@@ -20,6 +25,10 @@
 		),
 	)
 
+/obj/item/clothing/head/helmet/sec/post_reskin(mob/our_mob)
+	. = ..()
+	if (current_skin == "Black-Sec")
+		worn_icon_digi = 'tff_modular/modules/blacksec/icons/blacksec_worn_anthro.dmi'
 
 /obj/item/storage/belt/security/Initialize(mapload)
 	. = ..()
@@ -90,3 +99,8 @@
 			RESKIN_WORN_ICON_STATE = "BS_armor"
 		),
 	)
+
+/obj/item/clothing/suit/armor/vest/alt/sec/post_reskin(mob/our_mob)
+	. = ..()
+	if (current_skin == "Black-Sec")
+		worn_icon_digi = 'tff_modular/modules/blacksec/icons/blacksec_worn_anthro.dmi'
