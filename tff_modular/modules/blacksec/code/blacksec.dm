@@ -43,6 +43,23 @@
 		),
 	)
 
+/obj/item/storage/belt/security/webbing/peacekeeper
+	uses_advanced_reskins = TRUE
+	unique_reskin = list(
+		"Black-Sec" = list(
+			RESKIN_ICON = 'tff_modular/modules/blacksec/icons/blacksec_icon.dmi',
+			RESKIN_ICON_STATE = "BS_webbing",
+			RESKIN_WORN_ICON = 'tff_modular/modules/blacksec/icons/blacksec_worn.dmi',
+			RESKIN_WORN_ICON_STATE = "BS_webbing"
+		),
+		"Blue variant" = list(
+			RESKIN_ICON = 'modular_nova/master_files/icons/obj/clothing/belts.dmi',
+			RESKIN_ICON_STATE = "peacekeeper_webbing",
+			RESKIN_WORN_ICON = 'modular_nova/master_files/icons/mob/clothing/belt.dmi',
+			RESKIN_WORN_ICON_STATE = "peacekeeper_webbing"
+		),
+	)
+
 /obj/item/storage/backpack/duffelbag/sec/Initialize(mapload)
 	. = ..()
 	unique_reskin += list(
